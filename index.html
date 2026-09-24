@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Sports Trivia</title>
+<meta name="description" content="Football, baseball, and basketball trivia from 2000 to today.">
+<style>
+  :root {
+    --bg: #fdfcf9;
+    --text: #1a1a1a;
+    --muted: #555;
+    --card: #ffffff;
+    --line: #dddad3;
+    --football: #1b7a3a;
+    --baseball: #c8102e;
+    --basketball: #b34700;
+    --focus: #1d4ed8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --text: #f2f2f2;
+      --muted: #b5b5b5;
+      --card: #1e1e1e;
+      --line: #3a3a3a;
+      --football: #3fbf68;
+      --baseball: #ff5a6e;
+      --basketball: #ff8a3d;
+      --focus: #8ab4ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 38rem; margin: 0 auto; padding: 0 16px; }
+  a { color: inherit; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+  header { padding: 3rem 0 2rem; border-bottom: 1px solid var(--line); }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.2rem); line-height: 1.1; margin: 0 0 .5rem; }
+  .intro { color: var(--muted); margin: 0 0 1.5rem; }
+  nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+  nav a {
+    display: inline-block; padding: .45rem 1rem; border-radius: 999px;
+    color: #fff; font-weight: 700; text-decoration: none;
+  }
+  nav a.football { background: var(--football); }
+  nav a.baseball { background: var(--baseball); }
+  nav a.basketball { background: var(--basketball); }
+  @media (prefers-color-scheme: dark) { nav a { color: #111; } }
+
+  section { padding: 2.5rem 0 1.5rem; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-size: 2rem; margin: 0 0 .25rem; padding-left: .75rem;
+    border-left: 8px solid var(--accent);
+  }
+  section .sub { color: var(--muted); margin: 0 0 1.5rem; }
+  section h2 + ol.questions { margin-top: 1.5rem; }
+  #football { --accent: var(--football); }
+  #baseball { --accent: var(--baseball); }
+  #basketball { --accent: var(--basketball); }
+
+  ol.questions { padding: 0; margin: 0; list-style: none; counter-reset: q; }
+  ol.questions > li {
+    counter-increment: q;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--accent);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1.1rem;
+  }
+  .q { font-weight: 700; margin: 0 0 .6rem; }
+  .q::before { content: counter(q) ". "; color: var(--accent); }
+  ol.choices { margin: 0 0 .8rem; padding-left: 1.6rem; list-style: upper-alpha; }
+  ol.choices li { margin: .15rem 0; }
+  details { border-top: 1px dashed var(--line); padding-top: .6rem; }
+  summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+  details p { margin: .5rem 0 0; }
+  .top { display: inline-block; margin-top: .5rem; color: var(--muted); font-size: 1rem; }
+
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: 1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header id="top">
+  <h1>Sports Trivia</h1>
+  <p class="intro">Football, baseball, and basketball questions from 2000 to today: pick an answer, then open &ldquo;Show answer&rdquo; to check it.</p>
+  <nav aria-label="Sports">
+    <ul>
+      <li><a class="football" href="#football">Football</a></li>
+      <li><a class="baseball" href="#baseball">Baseball</a></li>
+      <li><a class="basketball" href="#basketball">Basketball</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section id="football" aria-labelledby="football-h">
+  <h2 id="football-h">Football</h2>
+  <ol class="questions" role="list">
+    <li>
+      <p class="q">Which team came back from a 28–3 deficit to win Super Bowl LI?</p>
+      <ol class="choices"><li>Atlanta Falcons</li><li>New England Patriots</li><li>Seattle Seahawks</li><li>Denver Broncos</li></ol>
+      <details><summary>Show answer</summary><p><strong>B. New England Patriots.</strong> They beat the Falcons 34–28 in February 2017 in the first Super Bowl to go to overtime.</p></details>
+    </li>
+    <li>
+      <p class="q">Tom Brady won his seventh Super Bowl with which team?</p>
+      <ol class="choices"><li>New England Patriots</li><li>Kansas City Chiefs</li><li>Los Angeles Rams</li><li>Tampa Bay Buccaneers</li></ol>
+      <details><summary>Show answer</summary><p><strong>D. Tampa Bay Buccaneers.</strong> They beat the Chiefs in Super Bowl LV in February 2021.</p></details>
+    </li>
+    <li>
+      <p class="q">The 2007 Patriots finished the regular season 16–0. Who beat them in the Super Bowl?</p>
+      <ol class="choices"><li>New York Giants</li><li>Pittsburgh Steelers</li><li>Indianapolis Colts</li><li>Green Bay Packers</li></ol>
+      <details><summary>Show answer</summary><p><strong>A. New York Giants.</strong> The Giants won Super Bowl XLII 17–14 in February 2008.</p></details>
+    </li>
+    <li>
+      <p class="q">How many touchdown passes did Peyton Manning throw in 2013 to set the single-season record?</p>
+      <ol class="choices"><li>50</li><li>52</li><li>55</li><li>58</li></ol>
+      <details><summary>Show answer</summary><p><strong>C. 55.</strong> He set the record with the Denver Broncos in the 2013 season.</p></details>
+    </li>
+    <li>
+      <p class="q">In the "Philly Special" trick play in Super Bowl LII, who caught the touchdown pass?</p>
+      <ol class="choices"><li>Zach Ertz</li><li>Nick Foles</li><li>Alshon Jeffery</li><li>Carson Wentz</li></ol>
+      <details><summary>Show answer</summary><p><strong>B. Nick Foles.</strong> The Eagles' quarterback caught the pass, and Philadelphia beat New England in February 2018.</p></details>
+    </li>
+    <li>
+      <p class="q">Super Bowl LIV in February 2020 was the Kansas City Chiefs' first Super Bowl win in how many years?</p>
+      <ol class="choices"><li>25</li><li>35</li><li>40</li><li>50</li></ol>
+      <details><summary>Show answer</summary><p><strong>D. 50.</strong> The Chiefs beat the San Francisco 49ers 31–20 in February 2020.</p></details>
+    </li>
+    <li>
+      <p class="q">Which team won Super Bowl XLVIII in February 2014 by beating the Denver Broncos 43–8?</p>
+      <ol class="choices"><li>Seattle Seahawks</li><li>Baltimore Ravens</li><li>New Orleans Saints</li><li>Carolina Panthers</li></ol>
+      <details><summary>Show answer</summary><p><strong>A. Seattle Seahawks.</strong> The February 2014 win was the franchise's first Super Bowl title.</p></details>
+    </li>
+  </ol>
+  <a class="top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+</section>
+
+<section id="baseball" aria-labelledby="baseball-h">
+  <h2 id="baseball-h">Baseball</h2>
+  <p class="sub">MLB moments since 2000.</p>
+  <ol class="questions" role="list">
+    <li>
+      <p class="q">In the 2004 ALCS, the Boston Red Sox became the first MLB team to win a series after trailing 3–0. Who did they beat?</p>
+      <ol class="choices"><li>Cleveland</li><li>Anaheim Angels</li><li>New York Yankees</li><li>St. Louis Cardinals</li></ol>
+      <details><summary>Show answer</summary><p><strong>C. New York Yankees.</strong> Boston went on to win the 2004 World Series.</p></details>
+    </li>
+    <li>
+      <p class="q">Which team won the 2016 World Series, ending the longest title drought in the sport?</p>
+      <ol class="choices"><li>Chicago Cubs</li><li>Cleveland</li><li>San Francisco Giants</li><li>Texas Rangers</li></ol>
+      <details><summary>Show answer</summary><p><strong>A. Chicago Cubs.</strong> They beat Cleveland in Game 7 of the 2016 World Series.</p></details>
+    </li>
+    <li>
+      <p class="q">How many home runs did Barry Bonds hit in 2001 to set the single-season record?</p>
+      <ol class="choices"><li>66</li><li>70</li><li>71</li><li>73</li></ol>
+      <details><summary>Show answer</summary><p><strong>D. 73.</strong> He hit them for the San Francisco Giants in 2001.</p></details>
+    </li>
+    <li>
+      <p class="q">Aaron Judge set the American League single-season home run record in 2022. How many did he hit?</p>
+      <ol class="choices"><li>60</li><li>62</li><li>64</li><li>65</li></ol>
+      <details><summary>Show answer</summary><p><strong>B. 62.</strong> He hit them for the New York Yankees in 2022.</p></details>
+    </li>
+    <li>
+      <p class="q">In 2024, who became the first player with 50 home runs and 50 stolen bases in one season?</p>
+      <ol class="choices"><li>Ronald Acuña Jr.</li><li>Mookie Betts</li><li>Shohei Ohtani</li><li>Bobby Witt Jr.</li></ol>
+      <details><summary>Show answer</summary><p><strong>C. Shohei Ohtani.</strong> He did it with the Los Angeles Dodgers in 2024.</p></details>
+    </li>
+    <li>
+      <p class="q">Ichiro Suzuki set the single-season hits record in 2004. How many hits did he have?</p>
+      <ol class="choices"><li>242</li><li>250</li><li>257</li><li>262</li></ol>
+      <details><summary>Show answer</summary><p><strong>D. 262.</strong> He had them for the Seattle Mariners in 2004.</p></details>
+    </li>
+    <li>
+      <p class="q">What rule change did MLB introduce in 2023 to speed up games?</p>
+      <ol class="choices"><li>Seven-inning games</li><li>Robot umpires for every pitch</li><li>Designated runner in the ninth inning</li><li>A pitch clock</li></ol>
+      <details><summary>Show answer</summary><p><strong>D. A pitch clock.</strong> It came in with the 2023 season, and average game times dropped sharply.</p></details>
+    </li>
+  </ol>
+  <a class="top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+</section>
+
+<section id="basketball" aria-labelledby="basketball-h">
+  <h2 id="basketball-h">Basketball</h2>
+  <p class="sub">NBA moments since 2000.</p>
+  <ol class="questions" role="list">
+    <li>
+      <p class="q">Kobe Bryant scored 81 points in one game in January 2006. Which team was it against?</p>
+      <ol class="choices"><li>Phoenix Suns</li><li>Toronto Raptors</li><li>Sacramento Kings</li><li>Boston Celtics</li></ol>
+      <details><summary>Show answer</summary><p><strong>B. Toronto Raptors.</strong> He did it on January 22, 2006.</p></details>
+    </li>
+    <li>
+      <p class="q">In the 2016 NBA Finals, which team came back from trailing 3–1 to win the title?</p>
+      <ol class="choices"><li>Golden State Warriors</li><li>Oklahoma City Thunder</li><li>Cleveland Cavaliers</li><li>San Antonio Spurs</li></ol>
+      <details><summary>Show answer</summary><p><strong>C. Cleveland Cavaliers.</strong> They beat the Golden State Warriors in seven games in 2016.</p></details>
+    </li>
+    <li>
+      <p class="q">The 2015–16 Golden State Warriors set the record for regular-season wins. What was their record?</p>
+      <ol class="choices"><li>73–9</li><li>72–10</li><li>70–12</li><li>74–8</li></ol>
+      <details><summary>Show answer</summary><p><strong>A. 73–9.</strong> They set the record in the 2015–16 season.</p></details>
+    </li>
+    <li>
+      <p class="q">In 2016, who became the first player voted MVP unanimously?</p>
+      <ol class="choices"><li>LeBron James</li><li>Kevin Durant</li><li>Russell Westbrook</li><li>Stephen Curry</li></ol>
+      <details><summary>Show answer</summary><p><strong>D. Stephen Curry.</strong> He got every first-place vote for the 2015–16 season.</p></details>
+    </li>
+    <li>
+      <p class="q">In February 2023, LeBron James became the NBA's all-time leading scorer. Whose record did he pass?</p>
+      <ol class="choices"><li>Kareem Abdul-Jabbar</li><li>Karl Malone</li><li>Kobe Bryant</li><li>Dirk Nowitzki</li></ol>
+      <details><summary>Show answer</summary><p><strong>A. Kareem Abdul-Jabbar.</strong> LeBron passed him on February 7, 2023.</p></details>
+    </li>
+    <li>
+      <p class="q">Nikola Jokić won his first NBA title and Finals MVP in 2023 with which team?</p>
+      <ol class="choices"><li>Miami Heat</li><li>Phoenix Suns</li><li>Denver Nuggets</li><li>Boston Celtics</li></ol>
+      <details><summary>Show answer</summary><p><strong>C. Denver Nuggets.</strong> They beat the Miami Heat in 2023 for the franchise's first championship.</p></details>
+    </li>
+    <li>
+      <p class="q">Dirk Nowitzki led which team to the 2011 NBA title?</p>
+      <ol class="choices"><li>San Antonio Spurs</li><li>Dallas Mavericks</li><li>Houston Rockets</li><li>Memphis Grizzlies</li></ol>
+      <details><summary>Show answer</summary><p><strong>B. Dallas Mavericks.</strong> They beat the Miami Heat in the 2011 Finals.</p></details>
+    </li>
+  </ol>
+  <a class="top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+</section>
+
+</main>
+
+<footer>
+  <p>One page of plain HTML and CSS. It uses no scripts, cookies, tracking, or outside services.</p>
+</footer>
+
+</div>
+</body>
+</html>
